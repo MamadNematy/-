@@ -1,4 +1,3 @@
-// ⬛ نوتیفیکیشن زیبا با لینک به سبد خرید
 function showNotification(message) {
   const container = document.getElementById("notification-container");
 
@@ -21,10 +20,8 @@ function showNotification(message) {
   }, 3000);
 }
 
-// ⬛ عنصر لیست محصولات
 const productContainer = document.getElementById("product-list");
 
-// ⬛ تابع ساخت کارت محصول (برای استفاده در همه جا)
 function createProductCard(product) {
   const card = document.createElement("div");
   card.className = "product-card";
@@ -41,7 +38,7 @@ function createProductCard(product) {
 
   const button = card.querySelector(".add-to-cart");
   button.addEventListener("click", (e) => {
-    e.preventDefault(); // جلوگیری از انتقال در صورت کلیک روی دکمه
+    e.preventDefault();
     addToCart(product);
     showNotification(`${product.name} به سبد خرید اضافه شد`);
   });
@@ -49,9 +46,8 @@ function createProductCard(product) {
   return card;
 }
 
-// ⬛ رندر اولیه همه محصولات
 function renderAllProducts() {
-  productContainer.className = "product-grid"; // اطمینان از ساختار grid
+  productContainer.className = "product-grid";
   productContainer.innerHTML = "";
 
   products.forEach((product) => {
@@ -60,7 +56,6 @@ function renderAllProducts() {
   });
 }
 
-// ⬛ جستجو
 const searchInput = document.getElementById("product-search");
 
 searchInput.addEventListener("input", () => {
@@ -75,9 +70,8 @@ searchInput.addEventListener("input", () => {
   renderFilteredProducts(filtered);
 });
 
-// ⬛ رندر نتایج فیلترشده
 function renderFilteredProducts(filteredProducts) {
-  productContainer.className = "product-grid"; // اطمینان از نمایش درست کارت‌ها
+  productContainer.className = "product-grid";
   productContainer.innerHTML = "";
 
   if (filteredProducts.length === 0) {
@@ -92,5 +86,4 @@ function renderFilteredProducts(filteredProducts) {
   });
 }
 
-// ⬛ اجرای رندر اولیه
 renderAllProducts();
