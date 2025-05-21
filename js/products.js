@@ -48,25 +48,49 @@ const products = [
   },
   {
     id: 7,
+    name: "کلایمبر کوهنوردی PulseFitness",
+    price: 34_000_000,
+    image: "assets/images/Vertical-Climber-7.jpg",
+    description:
+      "کلایمبر کوهنوردی با طراحی فشرده و حرکت ترکیبی دست و پا، مناسب تمرین پرفشار هوازی و تقویت هم‌زمان عضلات بالا و پایین‌تنه",
+  },
+  {
+    id: 8,
+    name: "دستگاه قایقرانی کتلر PulseFitness",
+    price: 42_000_000,
+    image: "assets/images/Indoor-Rower-8.jpg",
+    description:
+      "دستگاه قایقرانی کتلر با حرکت روان و مکانیزم مقاومتی دقیق، مناسب تقویت عضلات مرکزی، بالا و پایین‌تنه و بهبود استقامت قلبی",
+  },
+  {
+    id: 9,
+    name: "دستگاه پرس سینه هالتر المپیکی",
+    price: 44_500_000,
+    image: "assets/images/Olympic-Horizontal-Bench-Press-9.jpg",
+    description:
+      "دستگاه پرس سینه هالتر المپیکی با ساختار پایدار و طراحی ارگونومیک، مناسب افزایش حجم و قدرت عضلات سینه، سرشانه و پشت بازو",
+  },
+  {
+    id: 10,
     name: "ست دمبل باشگاهی 2.5 تا 25 کیلوگرم به‌همراه میز دوطبقه",
     price: 65_300_000,
-    image: "assets/images/2.5-25kg-Black-Rubber-Covered-Dumbbell-Set-7.jpg",
+    image: "assets/images/2.5-25kg-Black-Rubber-Covered-Dumbbell-Set-10.jpg",
     description:
       "شامل ۱۰ جفت دمبل روکش‌دار و میز فلزی مستحکم برای نگهداری منظم در باشگاه",
   },
   {
-    id: 8,
+    id: 11,
     name: "ست دمبل باشگاهی 27.5 تا 50 کیلوگرم با میز فلزی سنگین‌وزن",
     price: 58_000_000,
-    image: "assets/images/27.5-50kg-Black-Rubber-Covered-Dumbbell-Set-8.jpg",
+    image: "assets/images/27.5-50kg-Black-Rubber-Covered-Dumbbell-Set-11.jpg",
     description:
-      "مناسب تمرینات قدرتی سنگین، شامل ۱۲ جفت دمبل روکش‌دار با میز نگهدارنده صنعتی",
+      "مناسب تمرینات قدرتی سنگین، شامل 12 جفت دمبل روکش‌دار با میز نگهدارنده صنعتی",
   },
   {
-    id: 9,
-    name: "ست دمبل باشگاهی ۵۲.۵ تا ۶۰ کیلوگرم با میز نگهدارنده صنعتی",
+    id: 12,
+    name: "ست دمبل باشگاهی 52.5 تا 60 کیلوگرم با میز نگهدارنده صنعتی",
     price: 53_000_000,
-    image: "assets/images/52.5-60kg-Black-Rubber-Covered-Dumbbell-Set-9.jpg",
+    image: "assets/images/52.5-60kg-Black-Rubber-Covered-Dumbbell-Set-12.jpg",
     description:
       "ست سنگین بدنسازی با روکش لاستیکی، مناسب تمرینات قدرتی پیشرفته و باشگاه‌های تخصصی",
   },
