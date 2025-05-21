@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/images/dumbbells.png">
+    <title>فیت لند</title>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-info">
+                <span>تماس: 09371475622</span>
+            </div>
+            <div class="social-icons">
+                <a href="https://t.me/invincible_mamad" target="_blank" title="تلگرام">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://www.instagram.com/mh.nematy_/" target="_blank" title="اینستاگرام">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/989371475622" target="_blank" title="واتساپ">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ✅ هدر حرفه‌ای -->
+    <header class="site-header">
+        <div class="container nav-flex">
+            <h1 class="logo">فیت‌لند</h1>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">خانه</a></li>
+                    <li><a href="#">محصولات</a></li>
+                    <li><a href="#">خدمات</a></li>
+                    <li><a href="#">تماس با ما</a></li>
+                </ul>
+            </nav>
+
+            <div class="cart-link">
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>سبد خرید (<span id="cart-count">0</span>)</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ✅ سکشن هیرو -->
+    <section class="hero">
+        <div class="container">
+            <h2>از خونه تا باشگاه، تجهیزات حرفه‌ای فقط از فیت‌لند!</h2>
+            <p>فروش تخصصی تجهیزات باشگاهی؛ از دمبل تا دستگاه‌های بدنسازی حرفه‌ای</p>
+            <a href="#" class="cta-button">شروع خرید</a>
+        </div>
+    </section>
+
+    <!-- ✅ محصولات -->
+    <section class="products-section">
+        <div class="container">
+            <h2>محصولات ما</h2>
+            <div class="search-bar">
+                <input type="text" id="product-search" placeholder="جستجوی محصول..." />
+            </div>
+            <div id="product-list" class="product-grid"></div>
+        </div>
+    </section>
+
+    <!-- ✅ فوتر -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 فیت‌لند | تمامی حقوق محفوظ است</p>
+            <p>تماس: 09371475622 | اینستاگرام: @mh.nematy_</p>
+        </div>
+    </footer>
+
+    <div id="notification-container"></div>
+
+    <!-- ✅ اسکریپت‌ها -->
+    <script src="js/cart.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/render.js"></script>
+</body>
+
+</html>
