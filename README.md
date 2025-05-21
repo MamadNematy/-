@@ -1,9 +1,13 @@
-# 🏋️‍♂️ Fit-Kala
+# 🏋️‍♂️ فیت کالا
 
-![s1](assets/images/Screenshots/Screenshot-345.png)
-![s2](assets/images/Screenshots/Screenshot-349.png)
-![s3](assets/images/Screenshots/Screenshot-351.png)
-![s4](assets/images/Screenshots/Screenshot-352.png)
+## ![s1](assets/images/Screenshots/Screenshot-345.png)
+
+## ![s2](assets/images/Screenshots/Screenshot-349.png)
+
+## ![s3](assets/images/Screenshots/Screenshot-351.png)
+
+## ![s4](assets/images/Screenshots/Screenshot-352.png)
+
 ![s5](assets/images/Screenshots/Screenshot-350.png)
 
 **فروشگاه آنلاین تجهیزات ورزشی** طراحی‌شده با HTML، CSS و JavaScript — با ذخیره‌سازی اطلاعات سبد خرید در LocalStorage و انتشار از طریق GitHub Pages
@@ -68,4 +72,4 @@ cd Fit-Kala
 
 ---
 
-> طراحی‌شده با 💪 و علاقه توسط MamadNematy — 2025
+> طراحی‌شده توسط MamadNematy — 2025
