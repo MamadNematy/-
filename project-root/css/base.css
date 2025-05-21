@@ -1,0 +1,41 @@
+:root {
+  --primary: #00bcd4;
+  --primary-dark: #0097a7;
+  --light-gray: #ccc;
+  --mid-gray: #aaa;
+  --danger: #ff5555;
+  --danger-dark: #cc0000;
+  --bg-dark: #1a1a1a;
+  --border-dark: #333;
+  --bg-footer: #000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #111;
+  color: #fff;
+  direction: rtl;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--primary);
+}

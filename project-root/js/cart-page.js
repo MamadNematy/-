@@ -1,45 +1,68 @@
-const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-const container = document.getElementById("cart-items");
-const totalElement = document.getElementById("cart-total");
-
 function renderCart() {
-  container.innerHTML = "";
-  let total = 0;
+  const cartItemsContainer = document.getElementById("cart-items");
+  const cartTotalElement = document.getElementById("cart-total");
 
-  if (cartItems.length === 0) {
-    container.innerHTML = "<p>سبد خرید شما خالی است.</p>";
-    totalElement.textContent = "";
+  if (!cartItemsContainer || !cartTotalElement) return;
+
+  cartItemsContainer.innerHTML = "";
+
+  if (cart.length === 0) {
+    cartItemsContainer.innerHTML =
+      "<p style='text-align:center;'>سبد خرید شما خالی است.</p>";
+    cartTotalElement.textContent = "";
     return;
   }
 
-  cartItems.forEach((item, index) => {
-    total += item.price * item.quantity;
+  let total = 0;
 
-    const itemDiv = document.createElement("div");
-    itemDiv.className = "cart-item";
+  cart.forEach((item) => {
+    const itemElement = document.createElement("div");
+    itemElement.className = "cart-item";
+    itemElement.dataset.id = item.id;
 
-    itemDiv.innerHTML = `
+    itemElement.innerHTML = `
       <img src="${item.image}" alt="${item.name}">
       <div class="cart-item-details">
         <h3>${item.name}</h3>
-        <p>تعداد: ${item.quantity}</p>
+        <p>${item.description}</p>
+        <div class="quantity-controls">
+          <button class="decrease-qty">−</button>
+          <span class="item-quantity">${item.quantity}</span>
+          <button class="increase-qty">+</button>
+        </div>
       </div>
       <div class="cart-item-price">
         ${(item.price * item.quantity).toLocaleString()} تومان
       </div>
-      <button class="cart-item-remove" onclick="removeItem(${index})">حذف</button>
+      <button class="cart-item-remove">حذف</button>
     `;
 
-    container.appendChild(itemDiv);
+    cartItemsContainer.appendChild(itemElement);
+
+    total += item.price * item.quantity;
   });
 
-  totalElement.textContent = `جمع کل: ${total.toLocaleString()} تومان`;
+  cartTotalElement.textContent = `مبلغ کل: ${total.toLocaleString()} تومان`;
 }
 
-function removeItem(index) {
-  cartItems.splice(index, 1);
-  localStorage.setItem("cart", JSON.stringify(cartItems));
+document.addEventListener("DOMContentLoaded", () => {
+  const cartItemsContainer = document.getElementById("cart-items");
+
+  if (cartItemsContainer) {
+    cartItemsContainer.addEventListener("click", (event) => {
+      const target = event.target;
+      const productId = parseInt(target.closest(".cart-item").dataset.id, 10);
+
+      if (target.classList.contains("increase-qty")) {
+        increaseQuantity(productId);
+      } else if (target.classList.contains("decrease-qty")) {
+        decreaseQuantity(productId);
+      } else if (target.classList.contains("cart-item-remove")) {
+        removeFromCart(productId);
+      }
+    });
+  }
+
   renderCart();
-}
-
-renderCart();
+  updateCartCount();
+});

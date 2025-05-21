@@ -30,15 +30,18 @@ function createProductCard(product) {
   card.className = "product-card";
 
   card.innerHTML = `
-    <img src="${product.image}" alt="${product.name}">
-    <h3>${product.name}</h3>
+    <a href="product.html?id=${product.id}">
+      <img src="${product.image}" alt="${product.name}">
+      <h3>${product.name}</h3>
+    </a>
     <p>${product.description}</p>
     <span class="price">${product.price.toLocaleString()} تومان</span>
     <button class="add-to-cart">افزودن به سبد خرید</button>
   `;
 
   const button = card.querySelector(".add-to-cart");
-  button.addEventListener("click", () => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault(); // جلوگیری از انتقال در صورت کلیک روی دکمه
     addToCart(product);
     showNotification(`${product.name} به سبد خرید اضافه شد`);
   });
